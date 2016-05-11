@@ -32,7 +32,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @param   array  $config  An optional associative array of configuration settings.
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 * @see     JController
 	 */
 	public function __construct ($config = array())
@@ -49,7 +49,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  boolean  True if allowed to delete the record. Defaults to the permission set in the component.
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	protected function canDelete ($record)
 	{
@@ -73,7 +73,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  boolean  True if allowed to change the state of the record. Defaults to the permission set in the component.
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	protected function canEditState ($record)
 	{
@@ -97,7 +97,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	public function save ($data)
 	{
@@ -209,6 +209,8 @@ class FieldsModelField extends JModelAdmin
 	 * @param   array   $config  Configuration array for model. Optional.
 	 *
 	 * @return  JTable    A database object
+	 *
+	 * @since   3.6
 	 */
 	public function getTable ($type = 'Field', $prefix = 'FieldsTable', $config = array())
 	{
@@ -227,7 +229,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  void
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	protected function populateState ()
 	{
@@ -258,6 +260,8 @@ class FieldsModelField extends JModelAdmin
 	 * @param   integer  $pk  The id of the primary key.
 	 *
 	 * @return  mixed  Object on success, false on failure.
+	 *
+	 * @since   3.6
 	 */
 	public function getItem ($pk = null)
 	{
@@ -327,7 +331,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  mixed  A JForm object on success, false on failure
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	public function getForm ($data = array(), $loadData = true)
 	{
@@ -394,7 +398,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  array  An array of conditions to add to add to ordering queries.
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	protected function getReorderConditions ($table)
 	{
@@ -406,7 +410,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  mixed  The data for the form.
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	protected function loadFormData ()
 	{
@@ -463,7 +467,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  void
 	 *
-	 * @since    3.0
+	 * @since    3.6
 	 */
 	protected function preprocessForm (JForm $form, $data, $group = 'content')
 	{
@@ -521,6 +525,8 @@ class FieldsModelField extends JModelAdmin
 	 * @param   string  $itemId   [description]
 	 *
 	 * @return NULL|string
+	 *
+	 * @since   3.6
 	 */
 	public function getFieldValue ($fieldId, $context, $itemId)
 	{
@@ -565,6 +571,8 @@ class FieldsModelField extends JModelAdmin
 	 * @param   string  $value    [description]
 	 *
 	 * @return boolean
+	 *
+	 * @since   3.6
 	 */
 	public function setFieldValue ($fieldId, $context, $itemId, $value)
 	{
@@ -662,6 +670,8 @@ class FieldsModelField extends JModelAdmin
 	 * @param   string  $itemId   [description]
 	 *
 	 * @return  void
+	 *
+	 * @since   3.6
 	 */
 	public function cleanupValues ($context, $itemId)
 	{
@@ -679,7 +689,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  void.
 	 *
-	 * @since   3.1
+	 * @since   3.6
 	 */
 	protected function batchTag ($value, $pks, $contexts)
 	{
@@ -733,7 +743,7 @@ class FieldsModelField extends JModelAdmin
 	 *
 	 * @return  void
 	 *
-	 * @since   1.6
+	 * @since   3.6
 	 */
 	protected function cleanCache ($group = null, $client_id = 0)
 	{
@@ -792,6 +802,8 @@ class FieldsModelField extends JModelAdmin
 	 * @param   [type]  $component  [description]
 	 *
 	 * @return  [type]              [description]
+	 *
+	 * @since   3.6
 	 */
 	private function loadTypeForms (JForm &$form, $type, $component)
 	{

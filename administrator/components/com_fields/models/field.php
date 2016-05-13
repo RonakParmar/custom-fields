@@ -520,9 +520,9 @@ class FieldsModelField extends JModelAdmin
 	/**
 	 * Returning the value for the given field id, context and item id.
 	 *
-	 * @param   string  $fieldId  [description]
-	 * @param   string  $context  [description]
-	 * @param   string  $itemId   [description]
+	 * @param   string  $fieldId  The ID of the field
+	 * @param   string  $context  The context
+	 * @param   string  $itemId   The ID of the item
 	 *
 	 * @return NULL|string
 	 *
@@ -565,10 +565,10 @@ class FieldsModelField extends JModelAdmin
 	/**
 	 * Setting the value for the gven field id, context and item id.
 	 *
-	 * @param   string  $fieldId  [description]
-	 * @param   string  $context  [description]
-	 * @param   string  $itemId   [description]
-	 * @param   string  $value    [description]
+	 * @param   string  $fieldId  The ID of the field
+	 * @param   string  $context  The context
+	 * @param   string  $itemId   The ID of the item
+	 * @param   string  $value    The value of the field
 	 *
 	 * @return boolean
 	 *
@@ -666,8 +666,8 @@ class FieldsModelField extends JModelAdmin
 	/**
 	 * Cleaning up the values for the given item on the context.
 	 *
-	 * @param   string  $context  [description]
-	 * @param   string  $itemId   [description]
+	 * @param   string  $context  The context
+	 * @param   string  $itemId   The ID of the item
 	 *
 	 * @return  void
 	 *
@@ -795,13 +795,13 @@ class FieldsModelField extends JModelAdmin
 	}
 
 	/**
-	 * [loadTypeForms description]
+	 * LoadTypeForms
 	 *
-	 * @param   JForm   &$form      [description]
-	 * @param   [type]  $type       [description]
-	 * @param   [type]  $component  [description]
+	 * @param   JForm   &$form      A JForm object
+	 * @param   string  $type       The model type to instantiate
+	 * @param   string  $component  Component name
 	 *
-	 * @return  [type]              [description]
+	 * @return  void
 	 *
 	 * @since   3.7
 	 */
@@ -809,7 +809,7 @@ class FieldsModelField extends JModelAdmin
 	{
 		// Loading type specific forms
 		$paths = array(
-				JPath::clean(JPATH_ADMINISTRATOR . '/components/com_fields/models/types/forms/' . $type . '.xml')
+			JPath::clean(JPATH_ADMINISTRATOR . '/components/com_fields/models/types/forms/' . $type . '.xml')
 		);
 
 		if ($component)

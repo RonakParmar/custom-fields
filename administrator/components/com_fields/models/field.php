@@ -224,7 +224,6 @@ class FieldsModelField extends JModelAdmin
 
 	/**
 	 * Method to auto-populate the model state.
-	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
 	 * @return  void
@@ -458,7 +457,6 @@ class FieldsModelField extends JModelAdmin
 
 	/**
 	 * Auto-populate the model state.
-	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
 	 * @param   JForm   $form   The form object
@@ -524,7 +522,7 @@ class FieldsModelField extends JModelAdmin
 	 * @param   string  $context  The context
 	 * @param   string  $itemId   The ID of the item
 	 *
-	 * @return NULL|string
+	 * @return  NULL|string
 	 *
 	 * @since   3.7
 	 */
@@ -570,7 +568,7 @@ class FieldsModelField extends JModelAdmin
 	 * @param   string  $itemId   The ID of the item
 	 * @param   string  $value    The value of the field
 	 *
-	 * @return boolean
+	 * @return  boolean
 	 *
 	 * @since   3.7
 	 */
